@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="utf-8" />
+    <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./jquery.city.css" />
+    <script src="./jquery.city.js" type="text/javascript"></script>
+</head>
+<body>
+
+	<div id="city"></div>
+	<div id="abc"></div>
+	<script>
+	$.city(
+{0: {1: '河南省', 26: '四川省'}, 1: {2: '郑州市'}, 2: {3: '中原区', 4: '二七区', 5: '管城区', 6: '金水区', 7: '上街区', 8: '惠济区', 9: '巩义市', 10: '荥阳市', 11: '新密市', 12: '新郑市', 13: '登封市', 14: '中牟县'}, 26: {27: '成都市'}, 27: {28: '锦江区', 29: '龙泉驿区'}, 15: {16: '鼓楼区', 17: '龙亭区', 18: '顺河区', 19: '禹王台', 20: '金明区', 21: '杞 县', 22: '通许县', 23: '尉氏县', 24: '开封县', 25: '兰考县'}}
+);
+	$('#city').city({'name': 'my_city'});
+	$('#abc').city({'name': 'abc_city', 'city': 28});
+	</script>
+</body></html>
