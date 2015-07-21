@@ -86,8 +86,8 @@
 	};
 
 	var townChange = function(the_city) {
-		the_city.find('input[name=' + options['name']+ ']')
-				.val(the_city.find('.js-city-town').val());
+		the_city.find('input')
+				.val(the_city.find('.js-city-local').val());
 	};
 
 	$.fn.city = function (options) {
@@ -109,7 +109,7 @@
 			the_city.find(".js-city-city").change(function() {
 				cityChange(the_city);
 			});
-			the_city.find(".js-city-town").change(function() {
+			the_city.find(".js-city-local").change(function() {
 				townChange(the_city);
 			});
 
@@ -125,6 +125,8 @@
 				 	if (town) {
 						 fillOption(the_city.find('.js-city-local'),
 							city , town);
+						the_city.find('input')
+							.val(the_city.find('.js-city-local').val());
 				 	}
 		 		}
  			} else {
